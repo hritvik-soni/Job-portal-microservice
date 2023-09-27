@@ -48,8 +48,8 @@ public class UserService {
         String email = userRequestInput.getUserEmail();
         email = email.substring(email.length()-8,email.length());
         String role = "ROLE_USER";
-        if(email.equals("@bus.com")){
-            role = "ROLE_BUS";
+        if(email.equals("@rec.com")){
+            role = "ROLE_RECRUITMENT";
         }
         Users newUsers = Users.builder()
                 .userName(userRequestInput.getUserName())
@@ -58,8 +58,10 @@ public class UserService {
                 .userPassword(password)
                 .userCity(userRequestInput.getUserCity())
                 .userMobileNumber(userRequestInput.getUserMobileNumber())
-                .gender(userRequestInput.getGender())
-                .roles(role)
+                .userGender(userRequestInput.getUserGender())
+                .userRoles(role)
+
+
                 .build();
         Users savedUsers = userRepo.save(newUsers);
         return "user saved successfully!!!!";

@@ -35,8 +35,12 @@ public class Users {
     private String userMobileNumber;
     private String userCity;
     private Integer userAge;
-    private Gender gender;
-    private String roles;
+    private Gender userGender;
+    private String userRoles;
+    private String userSkills;
+    private String userDegree;
+    private Integer userExperience;
+
     @CreationTimestamp
     private LocalDateTime createdAt;
     @UpdateTimestamp

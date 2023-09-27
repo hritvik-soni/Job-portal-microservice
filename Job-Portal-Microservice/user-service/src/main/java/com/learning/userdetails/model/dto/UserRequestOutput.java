@@ -21,7 +21,7 @@ public class UserRequestOutput {
     private String userMobileNumber;
     private String userCity;
     private Integer userAge;
-    private Gender gender;
-    private String roles;
+    private Gender userGender;
+    private String userRoles;
 
 }

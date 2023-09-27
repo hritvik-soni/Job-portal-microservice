@@ -14,5 +14,5 @@ public class UserRequestAuthOutput {
 
     private String userEmail;
     private String userPassword;
-    private String roles;
+    private String userRoles;
 }

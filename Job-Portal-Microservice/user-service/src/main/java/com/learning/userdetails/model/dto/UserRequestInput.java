@@ -25,6 +25,6 @@ public class UserRequestInput {
     private String userMobileNumber;
     private String userCity;
     private Integer userAge;
-    private Gender gender;
+    private Gender userGender;
 
 }
