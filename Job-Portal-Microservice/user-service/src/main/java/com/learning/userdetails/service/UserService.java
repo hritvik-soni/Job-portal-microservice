@@ -79,39 +79,18 @@ public class UserService {
                 .userEmail(users.getUserEmail())
                 .userCity(users.getUserCity())
                 .userMobileNumber(users.getUserMobileNumber())
-                .gender(users.getGender())
-                .roles(users.getRoles())
+                .userGender(users.getUserGender())
+                .userRoles(users.getUserRoles())
                 .build();
     }
 
-    public BusOppRequestOutput getBusUserInfo(String email) {
 
-        Users users = userRepo.findByUserEmail(email);
-        if(users==null){
-            return null;
-        }
-        return  BusOppRequestOutput.builder()
-                .busOppEmail(users.getUserEmail())
-                .busOppNumber(users.getUserMobileNumber())
-                .busOppName(users.getUserName())
-                .build();
-    }
 
-    public UserDetailsForTicket getUserInfoForTicket(String email) {
-      Users users = userRepo.findByUserEmail(email);
-        if(users==null){
-           return null;
-        }
 
-        return  UserDetailsForTicket.builder()
-                .userName(users.getUserName())
-                .userEmail(users.getUserEmail())
-                .userMobileNumber(users.getUserMobileNumber())
-                .userAge(users.getUserAge())
-                .gender(users.getGender())
-                .build();
 
-    }
+
+
+
 
 //    public boolean getUserIsVerified(String email) {
 //         Users currUsers = userRepo.findByUserEmail(email);
@@ -168,7 +147,7 @@ public class UserService {
         return  UserRequestAuthOutput.builder()
                 .userEmail(users.getUserEmail())
                 .userPassword(users.getUserPassword())
-                .roles(users.getRoles())
+                .userRoles(users.getUserRoles())
                 .build();
     }
 }

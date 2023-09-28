@@ -32,6 +32,8 @@ public class Users {
     @NotBlank
     @NotNull
     private String userPassword;
+    //
+    private String userBio;
     private String userMobileNumber;
     private String userCity;
     private Integer userAge;
